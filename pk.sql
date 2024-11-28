@@ -66,13 +66,13 @@ ADD COLUMN teacher_id INTEGER,
 ADD FOREIGN KEY (teacher_id) REFERENCES teachers (id);
 
 UPDATE students
-    teacher_id = CASE
+    SET teacher_id = CASE
     WHEN id = 1 THEN 1
     WHEN id = 2 THEN 2
     WHEN id = 3 THEN 3
     WHEN id = 4 THEN 4
     WHEN id = 5 THEN 5
-    END;
+END;
 WHERE id IN (1, 2, 3, 4, 5);
 
 
